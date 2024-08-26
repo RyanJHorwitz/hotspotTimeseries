@@ -1,0 +1,191 @@
+{   "image_1":
+    {
+        "seizure": "HKG, 05-06, 3.9t",
+        "imgURL": "http://localhost:8000/images/forest/main_webp/forest_0001.webp",
+        "imgURLLarge": "http://localhost:8000/images/forest/large_webp/forest_0001.webp",
+        "imgURLXL": "http://localhost:8000/images/forest/XL_webp/forest_0001.webp",
+        "month": "May",
+        "year": 2006,
+        "alt": ""
+    },
+    "image_2":
+    {
+        "seizure": "MYS, 12-12, 6.0t",
+        "imgURL": "http://localhost:8000/images/forest/main_webp/forest_0002.webp",
+        "imgURLLarge": "http://localhost:8000/images/forest/large_webp/forest_0002.webp",
+        "imgURLXL": "http://localhost:8000/images/forest/XL_webp/forest_0002.webp",
+        "month": "December",
+        "year": 2012,
+        "alt": "Equitorial Guinea-Cameroon-Gabon hotspot expands sharply into the Republic of the Congo and the western edge of the Central African Republic. New hotspot emerges in Togo, Benin, and Ghana"
+    },
+    "image_3":
+    {
+        "seizure": "KEN, 06-13, 1.5t",
+        "imgURL": "http://localhost:8000/images/forest/main_webp/forest_0003.webp",
+        "imgURLLarge": "http://localhost:8000/images/forest/large_webp/forest_0003.webp",
+        "imgURLXL": "http://localhost:8000/images/forest/XL_webp/forest_0003.webp",
+        "month": "June",
+        "year": 2013,
+        "alt": "New hotspot emerges in the north of the Democratic Republic of the Congo"
+    },
+    "image_4":
+    {
+        "seizure": "HKG, 07-13, 2.0t",
+        "imgURL": "http://localhost:8000/images/forest/main_webp/forest_0004.webp",
+        "imgURLLarge": "http://localhost:8000/images/forest/large_webp/forest_0004.webp",
+        "imgURLXL": "http://localhost:8000/images/forest/XL_webp/forest_0004.webp",
+        "month": "July",
+        "year": 2013,
+        "alt": "Equitorial Guinea-Cameroon-Gabon-Republic of Congo-Central African Republic hotspot grows"
+    },
+    "image_5":
+    {
+        "seizure": "HKG, 08-13, 2.2t",
+        "imgURL": "http://localhost:8000/images/forest/main_webp/forest_0005.webp",
+        "imgURLLarge": "http://localhost:8000/images/forest/large_webp/forest_0005.webp",
+        "imgURLXL": "http://localhost:8000/images/forest/XL_webp/forest_0005.webp",
+        "month": "August",
+        "year": 2013,
+        "alt": "All hotspots grow"
+    },
+    "image_6":
+    {
+        "seizure": "TGO, 08-13, 0.7t",
+        "imgURL": "http://localhost:8000/images/forest/main_webp/forest_0006.webp",
+        "imgURLLarge": "http://localhost:8000/images/forest/large_webp/forest_0006.webp",
+        "imgURLXL": "http://localhost:8000/images/forest/XL_webp/forest_0006.webp",
+        "month": "August",
+        "year": 2013,
+        "alt": "All hotspots grow"
+    },
+    "image_7":
+    {
+        "seizure": "KEN, 10-13, 2.9t",
+        "imgURL": "http://localhost:8000/images/forest/main_webp/forest_0007.webp",
+        "imgURLLarge": "http://localhost:8000/images/forest/large_webp/forest_0007.webp",
+        "imgURLXL": "http://localhost:8000/images/forest/XL_webp/forest_0007.webp",
+        "month": "October",
+        "year": 2013,
+        "alt": "Democratic Republic of the Congo hotspot grows"
+    },
+    "image_8":
+    {
+        "seizure": "UGA, 10-13, 2.9t",
+        "imgURL": "http://localhost:8000/images/forest/main_webp/forest_0008.webp",
+        "imgURLLarge": "http://localhost:8000/images/forest/large_webp/forest_0008.webp",
+        "imgURLXL": "http://localhost:8000/images/forest/XL_webp/forest_0008.webp",
+        "month": "October",
+        "year": 2013,
+        "alt": "Democratic Republic of the Congo hotspot grows"
+    },
+    "image_9":
+    {
+        "seizure": "UGA, 12-13, 1.4t",
+        "imgURL": "http://localhost:8000/images/forest/main_webp/forest_0009.webp",
+        "imgURLLarge": "http://localhost:8000/images/forest/large_webp/forest_0009.webp",
+        "imgURLXL": "http://localhost:8000/images/forest/XL_webp/forest_0009.webp",
+        "month": "December",
+        "year": 2013,
+        "alt": "Equitorial Guinea-Cameroon-Gabon-Republic of Congo-Central African Republic hotspot merges with Democratic Republic of the Congo hotspot"
+    },
+    "image_10":
+    {
+        "seizure": "TGO, 01-14, 3.9t",
+        "imgURL": "http://localhost:8000/images/forest/main_webp/forest_0010.webp",
+        "imgURLLarge": "http://localhost:8000/images/forest/large_webp/forest_0010.webp",
+        "imgURLXL": "http://localhost:8000/images/forest/XL_webp/forest_0010.webp",
+        "month": "January",
+        "year": 2014,
+        "alt": "All hotspots grow"
+    },
+    "image_11":
+    {
+        "seizure": "KEN, 12-16, 1.0t",
+        "imgURL": "http://localhost:8000/images/forest/main_webp/forest_0011.webp",
+        "imgURLLarge": "http://localhost:8000/images/forest/large_webp/forest_0011.webp",
+        "imgURLXL": "http://localhost:8000/images/forest/XL_webp/forest_0011.webp",
+        "month": "December",
+        "year": 2016,
+        "alt": "Merged hotspot grows in the Democratic Republic of the Congo"
+    },
+    "image_12":
+    {
+        "seizure": "MYS, 01-17, 0.85t",
+        "imgURL": "http://localhost:8000/images/forest/main_webp/forest_0012.webp",
+        "imgURLLarge": "http://localhost:8000/images/forest/large_webp/forest_0012.webp",
+        "imgURLXL": "http://localhost:8000/images/forest/XL_webp/forest_0012.webp",
+        "month": "January",
+        "year": 2017,
+        "alt": "Merged hotspot grows in the Democratic Republic of the Congo"
+    },
+    "image_13":
+    {
+        "seizure": "UGA, 02-17, 1.3t",
+        "imgURL": "http://localhost:8000/images/forest/main_webp/forest_0013.webp",
+        "imgURLLarge": "http://localhost:8000/images/forest/large_webp/forest_0013.webp",
+        "imgURLXL": "http://localhost:8000/images/forest/XL_webp/forest_0013.webp",
+        "month": "February",
+        "year": 2017,
+        "alt": "Merged hotspot grows in the Democratic Republic of the Congo"
+    },
+    "image_14":
+    {
+        "seizure": "HKG, 07-17, 7.2t",
+        "imgURL": "http://localhost:8000/images/forest/main_webp/forest_0014.webp",
+        "imgURLLarge": "http://localhost:8000/images/forest/large_webp/forest_0014.webp",
+        "imgURLXL": "http://localhost:8000/images/forest/XL_webp/forest_0014.webp",
+        "month": "July",
+        "year": 2017,
+        "alt": "All hotspots stay steady"
+    },
+    "image_15":
+    {
+        "seizure": "CIV, 01-18, 0.5t",
+        "imgURL": "http://localhost:8000/images/forest/main_webp/forest_0015.webp",
+        "imgURLLarge": "http://localhost:8000/images/forest/large_webp/forest_0015.webp",
+        "imgURLXL": "http://localhost:8000/images/forest/XL_webp/forest_0015.webp",
+        "month": "January",
+        "year": 2018,
+        "alt": "Merged hotspot grows in Equitorial Guinea-Cameroon-Gabon-Republic of Congo-Central African Republic"
+    },
+    "image_16":
+    {
+        "seizure": "SGP, 03-18, 3.3t",
+        "imgURL": "http://localhost:8000/images/forest/main_webp/forest_0016.webp",
+        "imgURLLarge": "http://localhost:8000/images/forest/large_webp/forest_0016.webp",
+        "imgURLXL": "http://localhost:8000/images/forest/XL_webp/forest_0016.webp",
+        "month": "March",
+        "year": 2018,
+        "alt": "Merged hotspot grows in northern Cameroon"
+    },
+    "image_17":
+    {
+        "seizure": "AGO, 06-18, 1.1t",
+        "imgURL": "http://localhost:8000/images/forest/main_webp/forest_0017.webp",
+        "imgURLLarge": "http://localhost:8000/images/forest/large_webp/forest_0017.webp",
+        "imgURLXL": "http://localhost:8000/images/forest/XL_webp/forest_0017.webp",
+        "month": "June",
+        "year": 2018,
+        "alt": "Merged hotspot grows in the Republic of the Congo and Democratic Republic of the Congo"
+    },
+    "image_18":
+    {
+        "seizure": "HKG, 01-19, 2.1t",
+        "imgURL": "http://localhost:8000/images/forest/main_webp/forest_0018.webp",
+        "imgURLLarge": "http://localhost:8000/images/forest/large_webp/forest_0018.webp",
+        "imgURLXL": "http://localhost:8000/images/forest/XL_webp/forest_0018.webp",
+        "month": "January",
+        "year": 2019,
+        "alt": "Merged hotspot expands into northern Angola"
+    },
+    "image_19":
+    {
+        "seizure": "UGA, 01-19, 3.3t",
+        "imgURL": "http://localhost:8000/images/forest/main_webp/forest_0019.webp",
+        "imgURLLarge": "http://localhost:8000/images/forest/large_webp/forest_0019.webp",
+        "imgURLXL": "http://localhost:8000/images/forest/XL_webp/forest_0019.webp",
+        "month": "January",
+        "year": 2019,
+        "alt": "Merged hotspot grows in the Democratic Republic of the Congo"
+    }
+}

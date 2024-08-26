@@ -1,0 +1,1355 @@
+/* MAIN */
+.App {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+}
+
+.theme-savannah {
+    --color-primary: rgb(204, 0, 109);
+    --color-secondary: rgba(204, 0, 109, 0.45);
+}
+
+.theme-forest {
+    --color-primary: rgb(44, 204, 0);
+    --color-secondary: rgba(44, 204, 0, 0.45);
+}
+
+#uiContainer {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    /* height: 550px;
+    width: 576px; */
+    height: 90%;
+    width: 90%;
+    max-width: 576px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto; 
+    margin-right: auto;
+    outline: 3px solid rgb(50, 50, 50);
+    padding: 10px 0px;
+    background-color: black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#visualContainer {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-direction: row;
+    height: 96%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+
+
+/* SLIDES */
+#slideContainer {
+    display: flex;
+    object-fit: contain;
+    overflow: hidden;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+#leftBorder {
+    width: calc(50px + 3vw);
+    height: 100vh;
+}
+
+#slide {
+    width: calc(100% - (110px + 6vw));
+    /* object-fit: cover; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+
+/* HEADER */
+#headerContainer {
+    position: absolute;
+    width: fit-content;
+    padding: 2px 2.5px 0 2.5px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 5.5px;
+    left: calc(2vw + 60px);
+}
+
+.seizureName {
+    font-family: Arial;
+    color: rgba(255, 255, 255, 1);
+    font-size: 22px;
+    text-align: left;
+    z-index: 3;
+}
+
+.infoDefault, .infoClicked {
+    position: absolute;
+    font-family: Arial;
+    color: rgba(100, 100, 100, 1);
+    font-size: 20px;
+    text-align: left;
+    z-index: 100000000;
+    margin: 5px;
+    padding: 7px;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+
+.infoDefault:hover, .infoDefault:focus:not(:hover) {
+    color: white;
+    background-color: rgba(75, 75, 75, 1);
+    outline: none;
+}
+
+.infoDefault:focus {
+    color: white;
+    background-color: rgba(150, 150, 150, 1);
+    outline: none;
+}
+
+.infoDefault:active {
+    color: white;
+    background-color: var(--color-primary);
+    outline: none;
+}
+
+.infoClicked {
+    color: white;
+    background-color: var(--color-primary);
+}
+
+.infoClicked:focus {
+    outline: none;
+}
+
+
+
+/* TIMELINE */
+#timelineContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: fit-content;
+    height: 100%;
+    background-color: black;
+    border-top: 2vh solid var(--color-primary);
+    border-bottom: 2vh solid rgb(50, 50, 50);
+    margin-left: 2vw;
+}
+
+.timelineYears {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 3.5px solid rgba(50, 50, 50, 1);
+    border-right: 3.5px solid rgba(50, 50, 50, 1);
+    height: 100%;
+    width: 20px;
+    padding: 0 10px;
+    font-family: "Arial";
+    font-size: 11px;
+    color: white;
+}
+
+.even {
+    background-color: rgb(82, 82, 82);
+}
+
+.odd {
+    background-color: rgb(59, 56, 56);
+}
+
+.even span, .odd span {
+    z-index: 2;
+}
+
+#progressContainer {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-self: flex-start;
+}
+
+#caret {
+    position: absolute;
+    left: calc(2vw + -7px);
+    /* color: white; */
+    color: var(--color-primary);
+    font-size: 12px;
+    transition: 0.2s;
+}
+
+#progressBarLeft {
+    position: absolute;
+    left: 2vw;
+    width: 3px;
+    background-color: var(--color-primary);
+    transition: 0.2s;
+}
+
+#progressBarMiddle {
+    position: absolute;
+    left: 2vw;
+    width: 43px;
+    background-color: var(--color-secondary);
+    z-index: 1;
+    transition: 0.2s;
+}
+
+#progressBarRight {
+    position: absolute;
+    left: calc(2vw + 43px);
+    width: 3.5px;
+    background-color: var(--color-primary);
+    transition: 0.2s;
+}
+
+
+
+/* ARROWS */
+#buttonContainer {
+    height: calc(100%);
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+#scrubUpOuter, #scrubDownOuter {
+    position: absolute;
+    left: 22px;
+    height: calc(50% + 12px);
+    width: calc(100% + 27px);
+    margin-top: -12px;
+    margin-left: -35.5px;
+    cursor: pointer;
+    z-index: 100000;
+}
+
+#scrubUpOuter {
+    top: 0px;
+}
+
+#scrubDownOuter {
+    bottom: 0px
+}
+
+#scrubMiddle {
+    width: 100%;
+    height: 550px;
+}
+
+#scrubUpInner {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: 75px;
+    cursor: pointer;
+    transition: 0.3s;
+    right: 10px;
+    top: -5px;
+    border-radius: 100px;
+}
+
+#scrubDownInner {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: 75px;
+    cursor: pointer;
+    transition: 0.3s;
+    right: 10px;
+    bottom: -5px;
+    border-radius: 100px;
+}
+
+#scrubUpOuter:hover + .hoverBgLeft,
+#scrubDownOuter:hover + .hoverBgRight,
+.hoverBgLeft:hover,
+.hoverBgRight:hover,
+#scrubUpOuter:focus:not(:hover) + .hoverBgLeft,
+#scrubDownOuter:focus:not(:hover) + .hoverBgRight,
+.hoverBgLeft:focus:not(:hover),
+.hoverBgRight:focus:not(:hover) {
+    background-color: rgba(50, 50, 50, 1);
+    outline: none;
+}
+
+#scrubUpInner:focus,
+#scrubDownInner:focus,
+.hoverBgLeft:focus,
+.hoverBgRight:focus {
+    outline: none
+}
+
+#scrubUpOuter:hover + .hoverBgLeft:focus,
+#scrubDownOuter:hover + .hoverBgRight:focus {
+    background-color: rgba(150, 150, 150, 1);
+}
+
+#scrubUpOuter:active + #scrubUpInner,
+#scrubDownOuter:active + #scrubDownInner,
+.keydownBg {
+    /* background-color: rgb(117, 12, 126); */
+    background-color: var(--color-primary);
+}
+
+.scrubArrow {
+    font-size: 30px;
+    color: rgba(100, 100, 100, 1);
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+#scrubUpOuter:hover + #scrubUpInner > .scrubArrow, 
+#scrubDownOuter:hover + #scrubDownInner > .scrubArrow,
+.keydownArrow,
+.hoverBgLeft:focus > .scrubArrow,
+.hoverBgRight:focus > .scrubArrow,
+.hoverBgLeft:hover > .scrubArrow,
+.hoverBgRight:hover > .scrubArrow,
+#scrubUpOuter:focus + #scrubUpInner > .scrubArrow,
+#scrubDownOuter:focus + #scrubDownInner > .scrubArrow  {
+    font-size: 33px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.hoverBgLeft:active,
+.hoverBgRight:active {
+    background-color: var(--color-primary);
+}
+
+
+
+/* SPECIES SWITCH */
+#speciesContainer {
+    border-radius: 20px;
+    z-index: 1000000;
+}
+
+#speciesContainer {
+    position: absolute;
+    font-size: 20px;
+    font-family: Arial;
+    color: white;
+    left: calc(2vw + 60px);
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+}
+
+.speciesSwitch {
+    font-family: Arial;
+    color: rgba(100, 100, 100, 1);
+    font-size: 20px;
+    text-align: left;
+    z-index: 100000000;
+    margin: 5px;
+    padding: 7px;
+    top: 0px;
+    bottom: 0px;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: 0.3s;
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.speciesSwitch:hover, .speciesSwitch:focus:not(:hover) {
+    color: white;
+    background-color: rgba(75, 75, 75, 1);
+    outline: none;
+}
+
+.speciesSwitch:focus {
+    color: white;
+    background-color: rgba(150, 150, 150, 1);
+    outline: none;
+}
+
+.speciesSwitch:active {
+    color: white;
+    background-color: var(--color-primary);
+}
+
+.spSwitchActive {
+    color: white;
+    background-color: var(--color-primary);
+}
+
+#speciesText {
+    color: var(--color-primary)
+}
+
+
+/* MODAL INFORMATION BOX */
+#popup {
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+.popupClosed {
+    position: absolute;
+    z-index: -1;
+}
+
+.popupOpened {
+    position: absolute;
+    background-color: rgb(50, 50, 50, 0.5);
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 1000000000000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+}
+
+#popupInner {
+    transition: 0.2s; 
+    border-radius: 10px;
+}
+
+.innerClosed {
+    z-index: -1;
+}
+
+.innerOpened {
+    position: absolute;
+    background-color: rgb(0, 0, 0, 1);
+    box-shadow: 0 0 20px black;
+    border: 3px solid var(--color-primary);
+    width: 90%;
+    height: 90%;
+    z-index: 10000000000000;
+}
+
+#close {
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.closeClosed {
+    position: absolute;
+    display: none;
+}
+
+.closeOpened {
+    position: absolute;
+    font-size: 25px;
+    color: rgb(100, 100, 100);
+    top: -18.5px;
+    right: -18.5px;
+    cursor: pointer;
+    background-color: black;
+    outline: 3px solid rgb(100, 100, 100);
+    padding: 10px;
+}
+
+#close:hover {
+    color: white;
+    background-color: var(--color-primary);
+    outline: 3px solid var(--color-primary);
+}
+
+#close:focus {
+    color: white;
+    background-color: var(--color-primary);
+    outline: 3px solid var(--color-primary);
+}
+
+.tabClose {
+    color: white;
+    background-color: var(--color-primary);
+    outline: 3px solid var(--color-primary);
+}
+
+#textContainer {
+    position: absolute;
+    margin: 40px 20px 40px 40px;
+    line-height: 2;
+    font-size: 15px;
+    width: calc(100% - 60px);
+    height: calc(100% - 80px);
+    overflow-y: scroll;
+    transition: 0.3s;
+
+    &::-webkit-scrollbar {
+        width: 4.5em;
+        height: 0.5em;
+    }
+
+    &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 30px 30px rgb(100, 100, 100);
+        border: solid 30px transparent;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+        box-shadow: inset 0 0 30px 30px var(--color-primary);
+        border-radius: 3px;
+        border: solid 30px transparent;
+        cursor: pointer;
+    }
+}
+
+#textContainer:focus {
+    outline: none;
+}
+
+.popupBoxFormat {
+    background-color: rgb(50, 50, 50);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+#methodsContainer {
+    margin-bottom: 0;
+}
+
+
+.popupText {
+    font-family: Arial;
+    color: white;
+    font-size: 17px;
+}
+
+#summaryContainer:focus, #controlsContainer, #interpretationContainer, #methodsContainer {
+    outline: none;
+}
+
+.controlsIcons {
+    margin: 0 2px;
+}
+
+.tabInfoBox {
+    background-color: var(--color-primary);
+}
+
+
+
+/* Accessibility-specific */
+
+#scrubUpOuter:focus:not(:hover) + .tabActive,
+#scrubDownOuter:focus:not(:hover) + .tabActive,
+#scrubUpOuter:hover:not(:focus) + .tabActive:focus,
+#scrubDownOuter:hover:not(:focus) + .tabActive:focus,
+.tabActive:focus,
+.tabActive:focus:not(:hover) {
+    color: white;
+    background-color: var(--color-primary);
+}
+
+#hiddenAriaText {
+    /* visibility: none; */
+    background-color: white;
+
+}
+
+
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 0px) {
+
+    #uiContainer {
+        max-height: calc(100vw + 30px);
+    }
+
+    #slide {
+        margin-left: 30px;
+    }
+
+    #im {
+        width: 160%;
+        max-width: 500px;
+        max-height: calc(100vh - 80px);
+    }
+
+    .timelineYears {
+        font-size: 10px;
+    }
+
+    #scrubUpOuter, #scrubDownOuter {
+        display: none;
+    }
+
+    #scrubUpInner {
+        left: calc(2vw + 55px);
+        top: auto;
+        bottom: 90px;
+        width: 50px;
+        height: 50px;
+    }
+    
+    #scrubDownInner {
+        left: calc(2vw + 55px);
+        bottom: calc(35px);
+        width: 50px;
+        height: 50px;
+    }
+
+
+}
+
+@media screen and (min-width: 375px) {
+
+    #scrubUpOuter, #scrubDownOuter {
+        display: block;
+    }
+
+    #scrubUpInner {
+        left: auto;
+        right: 10px;
+        top: -5px;
+        width: 50px;
+        height: 50px;
+    }
+    
+    #scrubDownInner {
+        left: auto;
+        right: 10px;
+        bottom: -5px;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media screen and (min-width: 450px) {
+    #scrubUpInner {
+        left: auto;
+        right: 10px;
+        top: -5px;
+        width: 75px;
+        height: 75px;
+    }
+    
+    #scrubDownInner {
+        left: auto;
+        right: 10px;
+        bottom: -5px;
+        width: 75px;
+        height: 75px;
+    }
+}
+
+@media screen and (min-height: 600px) {
+    #uiContainer {
+        max-width: 700px;
+    }
+
+    #im {
+        max-width: none;
+        width: 150%;
+    }
+}
+
+@media (min-height: 700px) {
+
+    .timelineYears {
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (min-height: 800px) and (min-width: 600px) {
+
+    #uiContainer {
+        max-width: 800px;
+    }
+
+    #slide {
+        margin-left: 35px;
+    }
+
+    #im {
+        width: 143%;
+    }
+
+    #headerContainer {
+        left: calc(2vw + 80px)
+    }
+
+    .seizureName {
+        font-size: 30px;
+    }
+    
+    .infoDefault, .infoClicked {
+        font-size: 28px;
+        margin: 0px 5px;
+        padding: 7px;
+    }
+
+    #speciesContainer {
+        font-size: 30px;
+        left: calc(2vw + 81px)
+    }
+
+    .speciesSwitch {
+        font-size: 28px;
+    }
+    
+    #scrubUpInner {
+        left: auto;
+        right: 10px;
+        top: -5px;
+        width: 100px;
+        height: 100px;
+    }
+    
+    #scrubDownInner {
+        left: auto;
+        right: 10px;
+        bottom: -5px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .scrubArrow {
+        font-size: 50px;
+    }
+
+    #scrubUpOuter:hover + #scrubUpInner > .scrubArrow, 
+    #scrubDownOuter:hover + #scrubDownInner > .scrubArrow,
+    .keydownArrow,
+    .hoverBgLeft:focus > .scrubArrow,
+    .hoverBgRight:focus > .scrubArrow,
+    .hoverBgLeft:hover > .scrubArrow,
+    .hoverBgRight:hover > .scrubArrow,
+    #scrubUpOuter:focus + #scrubUpInner > .scrubArrow,
+    #scrubDownOuter:focus + #scrubDownInner > .scrubArrow  {
+        font-size: 53px;
+        color: rgba(255, 255, 255, 1);
+    }
+
+    #timelineContainer {
+        border-top: 2vh solid var(--color-primary);
+        border-bottom: 2vh solid rgb(50, 50, 50);
+        margin-left: 2vw;
+    }
+    
+    .timelineYears {
+        border-left: 5.5px solid rgba(50, 50, 50, 1);
+        border-right: 5.5px solid rgba(50, 50, 50, 1);
+        height: 100%;
+        width: 30px;
+        padding: 0 10px;
+        font-size: 15px;
+    }
+    
+    #caret {
+        left: calc(2vw + -10px);
+        font-size: 20px;
+    }
+    
+    #progressBarLeft {
+        width: 5px;
+    }
+    
+    #progressBarMiddle {
+        width: 55px;
+    }
+    
+    #progressBarRight {
+        left: calc(2vw + 55px);
+        width: 4.5px;
+    }
+}
+
+@media screen and (min-height: 900px) and (max-width: 500px) {
+    .timelineYears {
+        font-size: 12px;
+    }
+
+    #im {
+        width: 142%;
+    }
+
+    #uiContainer {
+        max-width: 900px;
+    }
+}
+
+@media screen and (min-height: 900px) and (min-width: 500px) {
+    #uiContainer {
+        max-width: 900px;
+    }
+
+    .timelineYears {
+        font-size: 16px;
+    }
+
+    #im {
+        width: 142%;
+    }
+}
+
+@media screen and (min-height: 1000px) and (min-width: 675px) {
+    #im {
+        width: 140%;
+    }
+
+    #headerContainer {
+        left: calc(2vw + 80px);
+        margin-top: 5px;
+    }
+
+    .seizureName {
+        font-size: 43px;
+    }
+    
+    .infoDefault, .infoClicked {
+        font-size: 41px;
+        margin: -5px 7px;
+        padding: 7px;
+        border-radius: 100px;
+    }
+
+    #speciesContainer {
+        font-size: 40px;
+        left: calc(2vw + 81px)
+    }
+
+    .speciesSwitch {
+        font-size: 38px;
+    }
+}
+
+@media screen and (min-height: 1100px) and (max-width: 650px) {
+    #uiContainer {
+        max-width: 1000px;
+    }
+
+    .timelineYears {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-height: 1100px) and (min-width: 650px) {
+    #uiContainer {
+        max-width: 1000px;
+    }
+
+    .timelineYears {
+        font-size: 19px;
+    }
+}
+
+@media screen and (min-height: 1200px) {
+    #uiContainer {
+        max-width: 1200px;
+    }
+
+    #im {
+        max-width: none;
+        width: 135%;
+    }
+}
+
+@media screen and (min-height: 1400px) and (min-width: 900px) {
+    #uiContainer {
+        max-width: 1300px;
+    }
+
+    #im {
+        max-width: none;
+        width: 123%;
+    }
+
+    #headerContainer {
+        top: 15px;
+        left: calc(2vw + 100px)
+    }
+
+    .seizureName {
+        font-size: 50px;
+    }
+    
+    .infoDefault, .infoClicked {
+        font-size: 48px;
+        margin: -8px 15px;
+        padding: 7px;
+    }
+
+    #speciesContainer {
+        font-size: 50px;
+        left: calc(2vw + 101px)
+    }
+
+    .speciesSwitch {
+        margin-left: 15px;
+        font-size: 48px;
+    }
+    
+    #scrubUpInner {
+        left: auto;
+        right: 20px;
+        top: -5px;
+        width: 150px;
+        height: 150px;
+    }
+    
+    #scrubDownInner {
+        left: auto;
+        right: 20px;
+        bottom: -5px;
+        width: 150px;
+        height: 150px;
+    }
+
+    .scrubArrow {
+        font-size: 80px;
+    }
+
+    #scrubUpOuter:hover + #scrubUpInner > .scrubArrow, 
+    #scrubDownOuter:hover + #scrubDownInner > .scrubArrow,
+    .keydownArrow,
+    .hoverBgLeft:focus > .scrubArrow,
+    .hoverBgRight:focus > .scrubArrow,
+    .hoverBgLeft:hover > .scrubArrow,
+    .hoverBgRight:hover > .scrubArrow,
+    #scrubUpOuter:focus + #scrubUpInner > .scrubArrow,
+    #scrubDownOuter:focus + #scrubDownInner > .scrubArrow  {
+        font-size: 83px;
+        color: rgba(255, 255, 255, 1);
+    }
+
+    #timelineContainer {
+        border-top: 2vh solid var(--color-primary);
+        border-bottom: 2vh solid rgb(50, 50, 50);
+        margin-left: 1vw;
+    }
+    
+    .timelineYears {
+        border-left: 7.5px solid rgba(50, 50, 50, 1);
+        border-right: 7.5px solid rgba(50, 50, 50, 1);
+        height: 100%;
+        width: 65px;
+        padding: 0 10px;
+        font-size: 26px;
+    }
+    
+    #caret {
+        left: calc(1vw + -11px);
+        font-size: 20px;
+    }
+    
+    #progressBarLeft {
+        left: 1vw;
+        width: 7px;
+    }
+    
+    #progressBarMiddle {
+        left: 1vw;
+        width: 92.5px;
+    }
+    
+    #progressBarRight {
+        left: calc(1vw + 92.5px);
+        width: 7px;
+    }
+}
+
+@media screen and (min-height: 1500px) and (max-width: 900px) {
+    #uiContainer {
+        max-width: 1500px;
+    }
+
+    #im {
+        width: 127%
+    }
+
+    .timelineYears {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-height: 1500px) and (min-width: 900px) {
+    #uiContainer {
+        max-width: 1500px;
+    }
+
+    #im {
+        width: 127%
+    }
+
+    .timelineYears {
+        font-size: 30px;
+    }
+}
+
+@media screen and (min-height: 1600px) {
+    #uiContainer {
+        max-width: 1800px;
+    }
+
+    #im {
+        width: 130%
+    }
+}
+
+@media screen and (min-height: 1700px) {
+    #uiContainer {
+        max-width: 2100px;
+    }
+
+    #im {
+        width: 125%
+    }
+}
+
+@media screen and (min-height: 1900px) and (min-width: 1380px) {
+    #uiContainer {
+        max-width: 2400px;
+    }
+
+    #im {
+        width: 98%
+    }
+    
+    #headerContainer {
+        top: 40px;
+        left: calc(2vw + 150px)
+    }
+
+    .seizureName {
+        font-size: 80px;
+    }
+    
+    .infoDefault, .infoClicked {
+        font-size: 78px;
+        margin: -32px 25px;
+        padding: 15px;
+    }
+
+    #speciesContainer {
+        font-size: 80px;
+        left: calc(2vw + 151px)
+    }
+
+    .speciesSwitch {
+        margin-left: 25px;
+        font-size: 78px;
+        padding: 20px;
+        border-radius: 100px;
+    }
+
+    #scrubUpInner {
+        left: auto;
+        right: 20px;
+        top: -5px;
+        width: 200px;
+        height: 200px;
+    }
+    
+    #scrubDownInner {
+        left: auto;
+        right: 20px;
+        bottom: -5px;
+        width: 200px;
+        height: 200px;
+    }
+
+    .scrubArrow {
+        font-size: 110px;
+    }
+
+    #scrubUpOuter:hover + #scrubUpInner > .scrubArrow, 
+    #scrubDownOuter:hover + #scrubDownInner > .scrubArrow,
+    .keydownArrow,
+    .hoverBgLeft:focus > .scrubArrow,
+    .hoverBgRight:focus > .scrubArrow,
+    .hoverBgLeft:hover > .scrubArrow,
+    .hoverBgRight:hover > .scrubArrow,
+    #scrubUpOuter:focus + #scrubUpInner > .scrubArrow,
+    #scrubDownOuter:focus + #scrubDownInner > .scrubArrow  {
+        font-size: 123px;
+        color: rgba(255, 255, 255, 1);
+    }
+
+    #timelineContainer {
+        border-top: 2vh solid var(--color-primary);
+        border-bottom: 2vh solid rgb(50, 50, 50);
+        margin-left: 0.5vw;
+    }
+    
+    .timelineYears {
+        border-left: 9.5px solid rgba(50, 50, 50, 1);
+        border-right: 9.5px solid rgba(50, 50, 50, 1);
+        height: 100%;
+        width: 105px;
+        padding: 0 10px;
+        font-size: 46px;
+    }
+    
+    #caret {
+        left: calc(0.5vw + -11px);
+        font-size: 20px;
+    }
+    
+    #progressBarLeft {
+        left: 0.5vw;
+        width: 9px;
+    }
+    
+    #progressBarMiddle {
+        left: 0.5vw;
+        width: 132.5px;
+    }
+    
+    #progressBarRight {
+        left: calc(0.5vw + 133px);
+        width: 9px;
+    }
+}
+
+
+@media screen and (min-width: 300px) {
+    .popupText {
+        font-family: Arial;
+        color: white;
+        font-size: 15px;
+    }
+
+    .closeOpened {
+        font-size: 20px;
+        top: -15.5px;
+        right: -8.5px;
+    }
+}
+
+
+@media screen and (min-width: 400px) {
+    .popupText {
+        font-family: Arial;
+        color: white;
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .popupText {
+        font-family: Arial;
+        color: white;
+        font-size: 18px;
+    }
+
+    .closeOpened {
+        position: absolute;
+        font-size: 25px;
+        color: rgb(100, 100, 100);
+        top: -18.5px;
+        right: -18.5px;
+        cursor: pointer;
+        background-color: black;
+        outline: 3px solid rgb(100, 100, 100);
+        padding: 10px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .popupText {
+        font-family: Arial;
+        color: white;
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .popupText {
+        font-family: Arial;
+        color: white;
+        font-size: 22px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .popupText {
+        font-family: Arial;
+        color: white;
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-height: 1000px) and (min-width: 800px) {
+
+    #popupInner {
+        transition: 0.2s; 
+        border-radius: 20px;
+    }
+
+    .popupText {
+        font-family: Arial;
+        color: white;
+        font-size: 40px;
+    }
+
+    #close {
+        border-radius: 100px;
+    }
+
+    .innerOpened {
+        border: 5px solid var(--color-primary);
+    }
+
+    .closeOpened {
+        font-size: 50px;
+        top: -25.5px;
+        right: -25.5px;
+        outline: 5px solid rgb(100, 100, 100);
+        padding: 10px;
+    }
+
+    #close:hover {
+        color: white;
+        background-color: var(--color-primary);
+        outline: 10px solid var(--color-primary);
+    }
+
+    .tabClose {
+        outline: 10px solid var(--color-primary);
+    }
+
+    #textContainer {
+        position: absolute;
+        margin: 60px 80px 80px 65px;
+        line-height: 2;
+        font-size: 15px;
+        width: calc(100% - 100px);
+        height: calc(100% - 120px);
+        overflow-y: scroll;
+        transition: 0.3s;
+    }
+
+    .popupBoxFormat {
+        padding: 30px;
+        border-radius: 20px;
+        margin-bottom: 80px;
+    }
+}
+
+@media screen and (max-height: 550px), (max-width: 500px) {
+    #textContainer {
+        margin-left: 30px;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    
+        &::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 30px 30px rgb(100, 100, 100);
+            border: solid 30px transparent;
+        }
+      
+        &::-webkit-scrollbar-thumb {
+            box-shadow: inset 0 0 30px 30px var(--color-primary);
+            border-radius: 3px;
+            border: solid 30px transparent;
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (min-height: 1700px) and (min-width: 2400px) {
+
+    #popupInner {
+        transition: 0.2s; 
+        border-radius: 40px;
+    }
+
+    .popupText {
+        font-family: Arial;
+        color: white;
+        font-size: 60px;
+    }
+
+    #close {
+        border-radius: 100px;
+    }
+
+    .closeOpened {
+        font-size: 70px;
+        top: -55.5px;
+        right: -55.5px;
+        outline: 10px solid rgb(100, 100, 100);
+        padding: 20px;
+    }
+
+    .innerOpened {
+        border: 10px solid var(--color-primary);
+    }
+
+    #close:hover {
+        color: white;
+        background-color: var(--color-primary);
+        outline: 10px solid var(--color-primary);
+    }
+
+    .tabClose {
+        outline: 10px solid var(--color-primary);
+    }
+
+    #textContainer {
+        position: absolute;
+        margin: 80px 80px 80px 80px;
+        line-height: 2;
+        font-size: 15px;
+        width: calc(100% - 140px);
+        height: calc(100% - 160px);
+        overflow-y: scroll;
+        transition: 0.3s;
+    }
+
+    .popupBoxFormat {
+        padding: 80px;
+        border-radius: 40px;
+        margin-bottom: 80px;
+    }
+
+
+}

@@ -1,0 +1,441 @@
+{   "image_1":
+    {
+        "seizure": "SGP, 06-02, 6.5t",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0001.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0001.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0001.webp",
+        "month": "June",
+        "year": 2002,
+        "alt": "Sample origins are located in the kavango zambezi transfrontier conservation area (KAZA), which spans Angola, Botswana, Namibia, Sambia, and Zimbabwe" 
+    },
+    "image_2":
+    {
+        "seizure": "HKG, 07-06, 2.6t",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0002.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0002.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0002.webp",
+        "month": "July",
+        "year": 2006,
+        "alt": "A new hotspot emerges east, at the southern border of Tanzania and northern border of Mozambique"
+    },
+    "image_3":
+    {
+        "seizure": "TWN, 07-06, 1.2t",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0003.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0003.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0003.webp",
+        "month": "July",
+        "year": 2006,
+        "alt": "All hotspots stay steady"
+    },
+    "image_4":
+    {
+        "seizure": "TWN, 07-06, 3.0t",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0004.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0004.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0004.webp",
+        "month": "July",
+        "year": 2006,
+        "alt": "All hotspots stay steady"
+    },
+    "image_5":
+    {
+        "seizure": "SGP, 03-07, 0.5t",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0005.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0005.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0005.webp",
+        "month": "March",
+        "year": 2007,
+        "alt": "KAZA hotspot grows"
+    },
+    "image_6":
+    {
+        "seizure": "PHL, 06-09, 4.9t",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0006.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0006.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0006.webp",
+        "month": "June",
+        "year": 2009,
+        "alt": "Tanzania-Mozambique hotspot grows slightly. KAZA hotspot shrinks slightly"
+    },
+    "image_7":
+    {
+        "seizure": "VNM, 04-10, 2.2t",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0007.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0007.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0007.webp",
+        "month": "April",
+        "year": 2010,
+        "alt": "Tanzania-Mozambique hotspot grows slightly. KAZA hotspot shrinks slightly"
+    },
+    "image_8":
+    {
+        "seizure": "KEN, 08-10, 1.5t",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0008.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0008.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0008.webp",
+        "month": "August",
+        "year": 2010,
+        "alt": "Tanzania-Mozambique hotspot grows sharply. Northward expansion into northern Tanzania and all of Kenya. KAZA hotspot shrinks slightly"
+    },
+    "image_9":
+    {
+        "seizure": "THA, 01-11, 0.33t",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0009.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0009.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0009.webp",
+        "month": "January",
+        "year": 2011,
+        "alt": "All hotspots stay steady"
+    },
+    "image_10":
+    {
+        "seizure": "KEN, 05-11, 1.3t",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0010.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0010.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0010.webp",
+        "month": "May",
+        "year": 2011,
+        "alt": "Tanzania-Mozambique-Kenya hotspot grows, especially in Kenya. KAZA hotspot shrinks slightly"
+    },
+    "image_11":
+    {
+        "seizure": "MYS, 09-11, 1.1t",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0011.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0011.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0011.webp",
+        "month": "September",
+        "year": 2011,
+        "alt": "All hotspots stay steady"
+    },
+    "image_12":
+    {
+        "seizure": "KEN, 12-11, 1.5t",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0012.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0012.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0012.webp",
+        "month": "December",
+        "year": 2011,
+        "alt": "All hotspots stay steady"
+    },
+    "image_13":
+    {
+        "seizure": "LKA, 05-12, 1.5t",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0013.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0013.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0013.webp",
+        "month": "May",
+        "year": 2012,
+        "alt": "All hotspots stay steady"
+    },
+    "image_14":
+    {
+        "seizure": "HKG, 10-12, 1.9tA",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0014.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0014.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0014.webp",
+        "month": "October",
+        "year": 2012,
+        "alt": "Tanzania-Mozambique-Kenya hotspot grows, especially in Kenya. KAZA hotspot shrinks slightly"
+    },
+    "image_15":
+    {
+        "seizure": "HKG, 10-12, 1.9tB",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0015.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0015.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0015.webp",
+        "month": "October",
+        "year": 2012,
+        "alt": "All hotspots stay steady"
+    },
+    "image_16":
+    {
+        "seizure": "MYS, 12-12, 6.0t",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0016.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0016.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0016.webp",
+        "month": "December",
+        "year": 2012,
+        "alt": "Tanzania-Mozambique-Kenya hotspot grows, especially in Tanzania and Kenya"
+    },
+    "image_17":
+    {
+        "seizure": "HKG, 01-13, 1.3t",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0017.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0017.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0017.webp",
+        "month": "January",
+        "year": 2013,
+        "alt": "All hotspots stay steady"
+    },
+    "image_18":
+    {
+        "seizure": "KEN, 01-13, 3.8t",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0018.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0018.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0018.webp",
+        "month": "January",
+        "year": 2013,
+        "alt": "Tanzania-Mozambique-Kenya hotspot grows, especially in Kenya"
+    },
+    "image_19":
+    {
+        "seizure": "ARE, 05-13, 1.5t",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0019.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0019.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0019.webp",
+        "month": "May",
+        "year": 2013,
+        "alt": "Tanzania-Mozambique-Kenya hotspot grows, especially in Kenya"
+    },
+    "image_20":
+    {
+        "seizure": "MWI, 05-13, 2.6t",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0020.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0020.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0020.webp",
+        "month": "May",
+        "year": 2013,
+        "alt": "All hotspots stay steady"
+    },
+    "image_21":
+    {
+        "seizure": "KEN, 06-13, 1.5t",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0021.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0021.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0021.webp",
+        "month": "June",
+        "year": 2013,
+        "alt": "Tanzania-Mozambique-Kenya hotspot grows, especially in western Tanzania"
+    },
+    "image_22":
+    {
+        "seizure": "KEN, 07-13, 3.3t",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0022.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0022.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0022.webp",
+        "month": "July",
+        "year": 2013,
+        "alt": "Tanzania-Mozambique-Kenya hotspot grows, especially in Kenya"
+    },
+    "image_23":
+    {
+        "seizure": "KEN, 10-13, 2.0t",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0023.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0023.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0023.webp",
+        "month": "October",
+        "year": 2013,
+        "alt": "Tanzania-Mozambique-Kenya hotspot grows, especially in Tanzania and Kenya"
+    },
+    "image_24":
+    {
+        "seizure": "KEN, 10-13, 2.9t",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0024.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0024.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0024.webp",
+        "month": "October",
+        "year": 2013,
+        "alt": "Tanzania-Mozambique-Kenya hotspot grows, especially in Tanzania and Kenya"
+    },
+    "image_25":
+    {
+        "seizure": "UGA, 10-13, 2.9t",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0025.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0025.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0025.webp",
+        "month": "October",
+        "year": 2013,
+        "alt": "Tanzania-Mozambique-Kenya hotspot grows, especially in Tanzania and Kenya"
+    },
+    "image_26":
+    {
+        "seizure": "UGA, 12-13, 1.4t",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0026.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0026.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0026.webp",
+        "month": "December",
+        "year": 2013,
+        "alt": "Tanzania-Mozambique-Kenya hotspot grows"
+    },
+    "image_27":
+    {
+        "seizure": "SGP, 03-14, 1.0t",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0027.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0027.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0027.webp",
+        "month": "March",
+        "year": 2014,
+        "alt": "Tanzania-Mozambique-Kenya hotspot grows"
+    },
+    "image_28":
+    {
+        "seizure": "UGA, 05-14, 1.8t",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0028.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0028.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0028.webp",
+        "month": "May",
+        "year": 2014,
+        "alt": "Tanzania-Mozambique-Kenya hotspot grows"
+    },
+    "image_29":
+    {
+        "seizure": "KEN, 06-14, 2.2t",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0029.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0029.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0029.webp",
+        "month": "June",
+        "year": 2014,
+        "alt": "Tanzania-Mozambique-Kenya hotspot grows"
+    },
+    "image_30":
+    {
+        "seizure": "UGA, 07-14, 0.6t",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0030.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0030.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0030.webp",
+        "month": "July",
+        "year": 2014,
+        "alt": "Tanzania-Mozambique-Kenya hotspot grows, especially in Mozambique"
+    },
+    "image_31":
+    {
+        "seizure": "MOZ, 05-15, 1.2t",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0031.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0031.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0031.webp",
+        "month": "May",
+        "year": 2015,
+        "alt": "All hotspots stay steady"
+    },
+    "image_32":
+    {
+        "seizure": "SGP, 05-15, 4.6t",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0032.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0032.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0032.webp",
+        "month": "May",
+        "year": 2015,
+        "alt": "All hotspots stay steady"
+    },
+    "image_33":
+    {
+        "seizure": "SSD, 06-16, 0.5t",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0033.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0033.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0033.webp",
+        "month": "June",
+        "year": 2016,
+        "alt": ""
+    },
+    "image_34":
+    {
+        "seizure": "MYS, 07-16, 0.89t",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0034.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0034.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0034.webp",
+        "month": "July",
+        "year": 2016,
+        "alt": "KAZA hotspot grows"
+    },
+    "image_35":
+    {
+        "seizure": "KEN, 12-16, 1.0t",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0035.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0035.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0035.webp",
+        "month": "December",
+        "year": 2016,
+        "alt": "Tanzania-Mozambique-Kenya hotspot grows"
+    },
+    "image_36":
+    {
+        "seizure": "MYS, 01-17, 0.85t",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0036.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0036.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0036.webp",
+        "month": "January",
+        "year": 2017,
+        "alt": "KAZA hotspot grows"
+    },
+    "image_37":
+    {
+        "seizure": "UGA, 02-17, 1.3t",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0037.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0037.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0037.webp",
+        "month": "February",
+        "year": 2017,
+        "alt": "Tanzania-Mozambique-Kenya hotspot grows" 
+    },
+    "image_38":
+    {
+        "seizure": "AGO, 06-18, 1.1t",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0038.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0038.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0038.webp",
+        "month": "June",
+        "year": 2018,
+        "alt": "KAZA hotspot grows"
+    },
+    "image_39":
+    {
+        "seizure": "KHM, 12-18, 3.2t",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0039.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0039.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0039.webp",
+        "month": "December",
+        "year": 2018,
+        "alt": "All hotspots grow"
+    },
+    "image_40":
+    {
+        "seizure": "UGA, 01-19, 3.3t",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0040.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0040.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0040.webp",
+        "month": "January",
+        "year": 2019,
+        "alt": "All hotspots grow"
+    },
+    "image_41":
+    {
+        "seizure": "SGP, 07-19, 8.8t",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0041.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0041.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0041.webp",
+        "month": "July",
+        "year": 2019,
+        "alt": "All hotspots grow"
+    },
+    "image_42":
+    {
+        "seizure": "COD, 11-21, 0.9t",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0042.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0042.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0042.webp",
+        "month": "November",
+        "year": 2021,
+        "alt": "All hotspots grow"
+    },
+    "image_43":
+    {
+        "seizure": "COD, 5-22, 0.7t",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0043.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0043.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0043.webp",
+        "month": "May",
+        "year": 2022,
+        "alt": "All hotspots grow"
+    },
+    "image_44":
+    {
+        "seizure": "COD, 12-22, 0.45t",
+        "imgURL": "http://localhost:8000/images/savannah/main_webp/savannah_0044.webp",
+        "imgURLLarge": "http://localhost:8000/images/savannah/large_webp/savannah_0044.webp",
+        "imgURLXL": "http://localhost:8000/images/savannah/XL_webp/savannah_0044.webp",
+        "month": "December",
+        "year": 2022,
+        "alt": "All hotspots grow"
+    }
+}
