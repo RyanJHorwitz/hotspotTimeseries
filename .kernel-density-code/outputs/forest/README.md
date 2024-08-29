@@ -1,3 +1,3 @@
 # Forest Elephant Outputs
 
-This file contains the output plots for forest elephants.
+This subfolder contains the output plots for forest elephants.

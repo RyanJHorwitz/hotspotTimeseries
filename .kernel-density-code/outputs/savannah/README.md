@@ -1,3 +1,3 @@
 # Savannah Elephant Outputs
 
-This file contains the output plots for savannah elephants.
+This subfolder contains the output plots for savannah elephants.
