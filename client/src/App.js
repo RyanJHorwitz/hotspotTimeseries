@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUp, faArrowDown, faCaretRight, faCircleInfo, faTimesCircle, faRepeat } from '@fortawesome/free-solid-svg-icons' 
 import "./App.css";
+import { API_URL } from "./index"; // 🌟 ADD THIS LINE TO SOURCE THE BACKEND URL
 
 function App() {
   
@@ -74,10 +75,10 @@ function App() {
 
   useEffect(() => {
 
-    fetchJSON("http://localhost:8000/data/savannah.json")
+    fetchJSON(`${API_URL}/data/savannah.json`)
       .then((data) => setSpecies(data));
 
-    fetchJSON("http://localhost:8000/data/forest.json")
+    fetchJSON(`${API_URL}/data/forest.json`)
       .then((data) => setForest(data));
 
   }, [])
@@ -496,62 +497,56 @@ function App() {
 
   }, [callbackForest, setCount, frames, popupOpen, popupDict, callbackOpenPopup, callbackClosePopup, uiDict])
 
-  // Return Statement
-  return (
+    return (
     <div className="App theme-savannah">
       <div id="uiContainer">
         <div id="hiddenAriaText">
-          <div tabIndex={"0"} aria-hidden="true" id="welcome" aria-label="Welcome! This interactive figure shows how the location of elephant poaching hotspots has changed over time. Press tab to proceed." autoFocus></div>
+          <div tabIndex={"0"} id="welcome" aria-label="Welcome! This interactive figure shows how the location of elephant poaching hotspots has changed over time. Press tab to proceed." autoFocus></div>
         </div>
         <div id="speciesContainer">
           <span aria-hidden="true">Species: <span id="speciesText">{spSwitch === "savannah" ? "Savannah" : "Forest"}</span></span>
-          <div tabIndex={"0"} aria-hidden="true" id="speciesButton" className="speciesSwitch" role="combobox" aria-expanded="false" aria-controls="speciesButton" aria-label={`Africa contains two species of elephants: savannah and forest. The visual is currently set to mode, ${spSwitch}. Press Enter to switch modes to the other species or Tab to continue.`}><FontAwesomeIcon icon={ faRepeat } onClick={ function() {handleForest(); uiDict.speciesButton.blur()} } /></div>
+          <div tabIndex={"0"} id="speciesButton" className="speciesSwitch" role="combobox" aria-expanded="false" aria-controls="speciesButton" aria-label={`Africa contains two species of elephants: savannah and forest. The visual is currently set to mode, ${spSwitch}. Press Enter to switch modes to the other species or Tab to continue.`}><FontAwesomeIcon icon={ faRepeat } onClick={ function() {handleForest(); uiDict.speciesButton.blur()} } /></div>
         </div>
-        <div id="slideContainer" aria-hidden="true">
+        <div id="slideContainer">
           <div id="leftBorder"></div>
           <div id="slide">
-          {arr.length > 0 & window.innerHeight <= 600 ? 
-            <img id="im" src={arr[count].imgURL} alt=""></img> :
-            arr.length > 0 & window.innerHeight > 600 & window.innerHeight <= 1600 ?
-           <img id="im" src={arr[count].imgURLLarge} alt=""></img> :
-           arr.length > 0 & window.innerHeight > 600 & window.innerHeight > 1600 ?
-           <img id="im" src={arr[count].imgURLXL} alt=""></img> :"" }
+          {arr.length > 0 && window.innerHeight <= 600 ? 
+            <img id="im" src={`${API_URL}${arr[count].imgURL}`} alt=""></img> :
+            arr.length > 0 && window.innerHeight > 600 && window.innerHeight <= 1600 ?
+           <img id="im" src={`${API_URL}${arr[count].imgURLLarge}`} alt=""></img> :
+           arr.length > 0 && window.innerHeight > 600 && window.innerHeight > 1600 ?
+           <img id="im" src={`${API_URL}${arr[count].imgURLXL}`} alt=""></img> :"" }
           </div>
           <div id="rightBorder"></div>
         </div>
         <div id="visualContainer">
-          <div id="progressContainer" aria-hidden="true">
+          <div id="progressContainer">
             <div id="progressBarLeft" style={{height: barHeight[count]}}></div>
             <div id="progressBarMiddle" style={{height: barHeight[count]}}></div>
             <div id="progressBarRight" style={{height: barHeight[count]}}></div>
             <FontAwesomeIcon id="caret" icon={ faCaretRight } style={{top: barHeight[count] - carHeight}} />
           </div>
-          <div id="timelineContainer" aria-hidden="true">
+          <div id="timelineContainer">
             {isFinite(minTimeline) ? yearBlocks : ""}
           </div>
-          {/*<div id="slideContainer" aria-hidden="true">
-            {arr.length > 0 ? 
-              <img id="slide" src={arr[count].imgURL} alt=""></img> 
-            : ""}
-          </div>*/}
           <div id="buttonContainer">
-            <div id="scrubDownOuter" onClick={handleSlide} aria-hidden="true"></div>
-            <div tabIndex={"0"} aria-hidden="true" id="scrubDownInner" className="hoverBgRight" role="combobox" aria-expanded="false" aria-controls="scrubDownInner" aria-label={`Current seizure: ${arr.length > 0 ? arr[count].seizure : ""}. ${arr.length > 0 ? arr[count].alt : ""}. Press enter to move forward in time or tab to continue.`}  onClick={handleSlide}><FontAwesomeIcon id="scrubArrowDown" className="scrubArrow" icon={ faArrowDown } /></div>
-            <div id="scrubMiddle" aria-hidden="true"></div>
-            <div id="scrubUpOuter" onClick={handleSlide} aria-hidden="true"></div>
-            <div tabIndex={"0"} aria-hidden="true" id="scrubUpInner" className="hoverBgLeft" role="combobox" aria-expanded="false" aria-controls="scrubUpInner" aria-label={`Press enter to move back in time or tab to continue. Current seizure: ${arr.length > 0 ? arr[count].seizure : ""}.`} onClick={handleSlide}><FontAwesomeIcon id="scrubArrowUp" className="scrubArrow" icon={ faArrowUp } /></div>
+            <div id="scrubDownOuter" onClick={handleSlide}></div>
+            <div tabIndex={"0"} id="scrubDownInner" className="hoverBgRight" role="combobox" aria-expanded="false" aria-controls="scrubDownInner" aria-label={`Current seizure: ${arr.length > 0 ? arr[count].seizure : ""}. ${arr.length > 0 ? arr[count].alt : ""}. Press enter to move forward in time or tab to continue.`}  onClick={handleSlide}><FontAwesomeIcon id="scrubArrowDown" className="scrubArrow" icon={ faArrowDown } /></div>
+            <div id="scrubMiddle"></div>
+            <div id="scrubUpOuter" onClick={handleSlide}></div>
+            <div tabIndex={"0"} id="scrubUpInner" className="hoverBgLeft" role="combobox" aria-expanded="false" aria-controls="scrubUpInner" aria-label={`Press enter to move back in time or tab to continue. Current seizure: ${arr.length > 0 ? arr[count].seizure : ""}.`} onClick={handleSlide}><FontAwesomeIcon id="scrubArrowUp" className="scrubArrow" icon={ faArrowUp } /></div>
           </div>
         </div>
         <div id="popup" className="popupClosed">
           <div id="popupInner" className="innerClosed">
               <div id="textContainer" tabIndex={"-1"} aria-label="Press tab to navigate through popup window.">
-                <div id="summaryContainer" className="popupBoxFormat" aria-hidden="true">
+                <div id="summaryContainer" className="popupBoxFormat">
                   <span className="popupText">
                     Summary: This interactive figure shows how the location of elephant poaching
                     hotspots has changed over time.
                   </span>
                 </div>
-                <div id="controlsContainer" className="popupBoxFormat" aria-hidden="true">
+                <div id="controlsContainer" className="popupBoxFormat">
                   <span className="popupText">
                     Controls: To navigate between time frames, click the up and down arrows 
                     on the figure or use the up and down keys on your keyboard
@@ -562,7 +557,7 @@ function App() {
                     (<FontAwesomeIcon className="controlsIcons" icon={ faRepeat } />).
                   </span>
                 </div>
-                <div id="interpretationContainer" className="popupBoxFormat" aria-hidden="true">
+                <div id="interpretationContainer" className="popupBoxFormat">
                   <span className="popupText">
                     Understanding Seizures: Names (top-left of the figure) are defined by a 3-letter 
                     ISO-code representing the country where a shipment of ivory was seized.  It is separated by
@@ -571,7 +566,7 @@ function App() {
                     is a 6.5t seizure from Singapore in June 2002.
                   </span>
                 </div>
-                <div id="methodsContainer" className="popupBoxFormat" aria-hidden="true">
+                <div id="methodsContainer" className="popupBoxFormat">
                   <span id="methodsText" className="popupText">
                     Methods: The Center for Environmental Forensic Science (CEFS) samples 
                     seizures of elephant ivory from across Africa and Asia. Using genetic 
@@ -582,12 +577,12 @@ function App() {
                   </span>
                 </div>
               </div>
-              <FontAwesomeIcon id="close" className="closeClosed" icon={ faTimesCircle } onClick={handleClosePopup} aria-hidden="true" aria-label="Press enter to close popup window and return to main figure." />
+              <FontAwesomeIcon id="close" className="closeClosed" icon={ faTimesCircle } onClick={handleClosePopup} aria-label="Press enter to close popup window and return to main figure." />
           </div>
         </div>
         <div id="headerContainer">
-          <span aria-hidden="true" className="seizureName">{arr.length > 0 ? arr[count].seizure : ""}</span>
-          <span><FontAwesomeIcon tabIndex={"0"} aria-hidden="true" id="info" className="infoDefault" icon={ faCircleInfo } onClick={handleOpenPopup} role="combobox" aria-expanded="false" aria-controls="info" aria-label="Information Button. Press enter to open popup box containing background information on this figure." /></span>
+          <span className="seizureName">{arr.length > 0 ? arr[count].seizure : ""}</span>
+          <span><FontAwesomeIcon tabIndex={"0"} id="info" className="infoDefault" icon={ faCircleInfo } onClick={handleOpenPopup} role="combobox" aria-expanded="false" aria-controls="info" aria-label="Information Button. Press enter to open popup box containing background information on this figure." /></span>
         </div>
       </div>
     </div>
