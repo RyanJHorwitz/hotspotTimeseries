@@ -1,25 +1,34 @@
 const express = require('express');
 const cors = require('cors');
+const path = require('path'); // Add this for reliable path joining
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
+// Root path handler so "Cannot GET /" disappears
+app.get('/', (req, res) => {
+    res.send('Backend server is running successfully!');
+});
+
 // Function to serve this specific json message
 app.get('/message', (req, res) => {
     res.json({ message: "Hello from server!" });
 });
 
-// Function to serve all static files inside images directory
-app.use('/images', express.static('../client/public/images'));
-app.use('/images/savannah', express.static('../client/public/images/savannah'));
-app.use('/images/forest', express.static('../client/public/images/forest'));
+// FIX STATIC PATHS: Move the data/images into the server folder (see Step 2)
+app.use('/images', express.static(path.join(__dirname, 'public/images')));
+app.use('/images/savannah', express.static(path.join(__dirname, 'public/images/savannah')));
+app.use('/images/forest', express.static(path.join(__dirname, 'public/images/forest')));
+app.use('/data', express.static(path.join(__dirname, 'public/data')));
 
-// Function to serve all static files inside data directory
-app.use('/data', express.static('../client/public/data'));
+// ONLY listen if running locally (Vercel ignores app.listen)
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(8000, () => {
+        console.log(`Server is running on port 8000.`);
+    });
+}
 
-// Specify port to listen on
-app.listen(8000, () => {
-    console.log(`Server is running on port 8000.`);
-});
+// Export the app instance for Vercel's serverless handler
+module.exports = app;
