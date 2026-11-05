@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 
-// 🌟 Add this line to handle local vs production backend routing
-export const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
+export const API_URL = process.env.API_URL || process.env.Config || 'https://vercel.app';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
