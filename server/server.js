@@ -1,10 +1,15 @@
 const express = require('express');
 const cors = require('cors');
-const path = require('path'); // Add this for reliable path joining
+const path = require('path');
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: "https://hotspot-timeseries-frontend.vercel.app",
+  methods: ["GET", "POST", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
+}));
+
 app.use(express.json());
 
 // Root path handler so "Cannot GET /" disappears
