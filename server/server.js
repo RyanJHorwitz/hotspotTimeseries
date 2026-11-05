@@ -1,7 +1,6 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path'); // Add this for reliable path joining
-const path = require('path'); // Add this for reliable path joining
 
 const app = express();
 
