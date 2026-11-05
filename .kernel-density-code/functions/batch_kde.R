@@ -1,6 +1,6 @@
 
 # Note: Ported from ESRI ArcGIS Pro Kernel Density Tool using https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/how-kernel-density-works.htm
-batch_KDE <- function(input_ppp_list, bbox, eps, kernel = "quartic", diggle = TRUE) {
+batch_KDE <- function(input_ppp_list, bbox, eps, kernel = "quartic", diggle = TRUE, seizure_weights) {
   
   merged_ppp <- c()
   for (index in 1:length(input_ppp_list)) {
@@ -71,8 +71,9 @@ batch_KDE <- function(input_ppp_list, bbox, eps, kernel = "quartic", diggle = TR
         density_raster <- raster(plotted) # Convert output to raster
         crs(density_raster) <- "ESRI:102022" # Assign projected coordinate system to raster
         density_raster[is.na(density_raster)] <- 0 # Remove all NA values in raster and change to 0 (important for sum calculation)
-        density_raster[!is.na(density_raster)] <- getValues(density_raster) # SHOULD I NORMALIZE? #####################################################################333
-
+        density_raster[!is.na(density_raster)] <- getValues(density_raster) / max(getValues(density_raster)) # Normalized
+        density_raster[!is.na(density_raster)] <- getValues(density_raster) * seizure_weights[m] # multiplied by seizure weight
+        
         # Add sample density raster to list with all other sample rasters
         raster_list[[m]] <- density_raster
 

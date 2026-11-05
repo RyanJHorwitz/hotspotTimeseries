@@ -24,7 +24,7 @@ library(terra)
 
 # --- KERNEL DENSITY CALCULATION --------------------------------------------------------------------------------- #
 
-set_species <- "savannah"
+set_species <- "forest"
 
 source("./functions/init_kde.R")
 
@@ -38,17 +38,20 @@ init <- init_KDE(species = set_species, #                                       
 )
 
 seizure_names <- init$seizure_names
+seizure_weights <- init$seizure_weights
 
 source("./functions/batch_kde.R")
 
 kdens <- batch_KDE(input_ppp_list = init$point_estimates, #                                            INPUT_OPTIONS: A ppp object with an equal-area projection
-                                         bbox = st_bbox(init$study_area) * 1.1, #                      INPUT_OPTIONS: Bounding box enclosing all point estimates
-                                         eps = 20000)                           #                      INPUT_OPTIONS: The output resolution
+                   bbox = st_bbox(init$study_area) * 1.1, #                                            INPUT_OPTIONS: Bounding box enclosing all point estimates
+                   eps = 20000,                           #                                            INPUT_OPTIONS: The output resolution
+                   seizure_weights = seizure_weights)     #                                            INPUT_OPTIONS: Seizure weight vector or 0
 
 source("./functions/cumsum_kde.R")
 
 to_plot <- cumsum_KDE(input_raster_list = kdens$raster, 
                       focal = 3)
+
 
 # --- KERNEL DENSITY PLOTS --------------------------------------------------------------------------------------- #
 

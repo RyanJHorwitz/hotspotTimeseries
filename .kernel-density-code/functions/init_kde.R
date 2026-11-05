@@ -102,6 +102,9 @@ init_KDE <- function(species, method = "VORONOI", pe_type = "median", point_esti
   
   geolocalized_points <- reverseList(geolocalized_points)[[species]]
   
-  return(list(seizure_names = seizure_names, point_estimates = geolocalized_points, study_area = study_area_projected))
+  seizure_weights <- unlist(lapply(seizure_names, function(x) sub("(.*?)_[^_]*", "", as.character(x))))
+  seizure_weights <- unlist(lapply(seizure_weights, function(x) as.double(gsub("[^0-9.-]", "", x))))
+  
+  return(list(seizure_names = seizure_names, point_estimates = geolocalized_points, study_area = study_area_projected, seizure_weights = seizure_weights))
   
 }

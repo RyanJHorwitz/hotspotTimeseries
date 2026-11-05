@@ -136,7 +136,7 @@ function App() {
 
     window.addEventListener("resize", resizeWindow)
     return () => {
-      window.addEventListener("resize", resizeWindow)
+      window.removeEventListener("resize", resizeWindow)
     }
       
   }, [setCarHeight])
