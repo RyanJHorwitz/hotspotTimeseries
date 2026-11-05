@@ -33,7 +33,7 @@ init <- init_KDE(species = set_species, #                                       
                  pe_type = "median",    #                                                              INPUT_OPTIONS: "median"
                  pe_crs = 4326,         #                                                              INPUT_OPTIONS: Initial coordinate system of the point estimates
                  crs = "ESRI:102022",   #                                                              INPUT_OPTIONS: An equal area projection
-                 point_estimate_folder_path = "./datasets/median-point-estimates", #                   INPUT_OPTIONS: Folder path leading to point estimate data
+                 point_estimate_folder_path = "./datasets/median-point-estimates/Seizure_Point_Estimates", #                   INPUT_OPTIONS: Folder path leading to point estimate data
                  study_area_shapefile_path = "./datasets/study-area/Africa_Countries_Projected.shp" #  INPUT_OPTIONS: File path leading to study area shapefile
 )
 
@@ -46,6 +46,8 @@ kdens <- batch_KDE(input_ppp_list = init$point_estimates, #                     
                    bbox = st_bbox(init$study_area) * 1.1, #                                            INPUT_OPTIONS: Bounding box enclosing all point estimates
                    eps = 20000,                           #                                            INPUT_OPTIONS: The output resolution
                    seizure_weights = seizure_weights)     #                                            INPUT_OPTIONS: Seizure weight vector or 0
+
+init$point_estimates
 
 source("./functions/cumsum_kde.R")
 
@@ -69,6 +71,9 @@ cols <- pal(length(scaling_method))
 to_plot$col <- cols[cut(to_plot$layer, scaling_method)]
 
 to_plot[to_plot$layer <= 0,]$col <- "#000000"
+
+to.plot <- to_plot[to_plot$seizure == "HKG_01-13_1.3t",]
+writeRaster(rasterFromXYZ(data.frame(x = to.plot$x, y = to.plot$y, z = to.plot$layer)), "forest_hotspots.tiff")
 
 p <- ggplot() + 
   geom_tile(data = to_plot, aes(x = x, y = y, fill = col)) +
