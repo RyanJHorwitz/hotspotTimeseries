@@ -34,12 +34,12 @@ app.use('/images/savannah', express.static(path.join(__dirname, 'public/images/s
 app.use('/images/forest', express.static(path.join(__dirname, 'public/images/forest')));
 app.use('/data', express.static(path.join(__dirname, 'public/data')));
 
-// ONLY listen if running locally (Vercel ignores app.listen)
+// Remove or isolate your standard app.listen block:
 if (process.env.NODE_ENV !== 'production') {
     app.listen(8000, () => {
         console.log(`Server is running on port 8000.`);
     });
 }
 
-// Export the app instance for Vercel's serverless handler
+// 🌟 YOU MUST ADD THIS LINE AT THE VERY BOTTOM 🌟
 module.exports = app;
