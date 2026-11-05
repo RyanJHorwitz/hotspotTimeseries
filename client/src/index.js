@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 
-export const API_URL = process.env.API_URL || process.env.Config || 'https://vercel.app';
+export const API_URL = process.env.API_URL || process.env.Config || 'https://hotspot-timeseries.vercel.app';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
