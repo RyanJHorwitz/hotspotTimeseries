@@ -510,12 +510,12 @@ function App() {
         <div id="slideContainer">
           <div id="leftBorder"></div>
           <div id="slide">
-          {arr.length > 0 && window.innerHeight <= 600 ? 
-            <img id="im" src={`${API_URL}${arr[count].imgURL}`} alt=""></img> :
-            arr.length > 0 && window.innerHeight > 600 && window.innerHeight <= 1600 ?
-           <img id="im" src={`${API_URL}${arr[count].imgURLLarge}`} alt=""></img> :
-           arr.length > 0 && window.innerHeight > 600 && window.innerHeight > 1600 ?
-           <img id="im" src={`${API_URL}${arr[count].imgURLXL}`} alt=""></img> :"" }
+{arr.length > 0 && window.innerHeight <= 600 ? 
+  <img id="im" src={arr[count].imgURL.replace("http://localhost:8000", API_URL)} alt=""></img> :
+  arr.length > 0 && window.innerHeight > 600 && window.innerHeight <= 1600 ?
+  <img id="im" src={arr[count].imgURLLarge.replace("http://localhost:8000", API_URL)} alt=""></img> :
+  arr.length > 0 && window.innerHeight > 600 && window.innerHeight > 1600 ?
+  <img id="im" src={arr[count].imgURLXL.replace("http://localhost:8000", API_URL)} alt=""></img> :"" }
           </div>
           <div id="rightBorder"></div>
         </div>
